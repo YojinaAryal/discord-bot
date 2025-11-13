@@ -9,6 +9,7 @@ const client = new Client({
   ],
 });
 
+
 client.on("messageCreate", (message) => {
   console.log(message.content);
 });
