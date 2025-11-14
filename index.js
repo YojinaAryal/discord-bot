@@ -11,7 +11,14 @@ const client = new Client({
 
 
 client.on("messageCreate", (message) => {
+  if (message.author.bot) return;
   console.log(message.content);
+  message.reply({
+    content: "Hi From Bot",
+  });
 });
+
+client.on("interactionCreate",)
+console.log('TOKEN from env:', process.env.BOT_TOKEN);
 
 client.login(process.env.BOT_TOKEN);
